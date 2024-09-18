@@ -3,16 +3,16 @@
         <h2>{{ $pageTitle }}</h2>
         <ol class="breadcrumb">
             <li class="breadcrumb-item">
-                <a href="index.html">This is</a>
+                <a href="{{ url('/') }}">Home</a>
             </li>
             <li class="breadcrumb-item active">
-                <strong>Breadcrumb</strong>
+                <strong>{{ $pageTitle }}</strong>
             </li>
         </ol>
     </div>
     <div class="col-sm-8">
         <div class="title-action">
-            <a href="" class="btn btn-primary">This is action area</a>
+            <a href="{{ url($actionUrl) }}" class="btn btn-primary">Create</a>
         </div>
     </div>
 </div>

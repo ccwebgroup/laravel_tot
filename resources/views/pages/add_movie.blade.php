@@ -10,7 +10,7 @@
                     </div>
                     <div class="ibox-content">
                         <!-- Form for adding a movie -->
-                        <form action="{{ url('add-movies') }}" method="POST">
+                        <form action="{{ url('add-movie') }}" method="POST">
                             @csrf
                             <div class="form-group">
                                 <label for="title">Title</label>

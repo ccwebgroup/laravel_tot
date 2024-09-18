@@ -8,13 +8,14 @@ use Illuminate\View\Component;
 
 class PageHeader extends Component
 {
-    public $pageTitle;
+    public $pageTitle, $actionUrl;
     /**
      * Create a new component instance.
      */
-    public function __construct($pageTitle)
+    public function __construct($pageTitle, $actionUrl)
     {
         $this->pageTitle = $pageTitle;
+        $this->actionUrl = $actionUrl;
     }
 
     /**

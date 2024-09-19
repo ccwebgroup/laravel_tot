@@ -16,7 +16,7 @@ Route::get('/page3', function () {
     return view('pages.page3');
 });
 
-Route::get('/page1', [MovieController::class, 'index']);
+Route::get('/movies', [MovieController::class, 'index']);
 Route::get('/add-movie', [MovieController::class, 'show_add_movie_form']);
 Route::post('/add-movie', [MovieController::class, 'add_movie']);
 

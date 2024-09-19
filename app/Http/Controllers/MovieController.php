@@ -33,7 +33,7 @@ class MovieController extends Controller
             ]);
 
             if ($query) {
-                return redirect(url('/page1'))->with('success', 'Movie added successfully!');
+                return redirect(url('/movies'))->with('success', 'Movie added successfully!');
             } else {
                 return redirect()->back()->with('error', 'Failed to add the movie!');
             }
@@ -63,7 +63,7 @@ class MovieController extends Controller
         ]);
 
         if ($query) {
-            return redirect(url('/page1'))->with('success', 'Movie updated successfully!');
+            return redirect(url('/movies'))->with('success', 'Movie updated successfully!');
         }
     }
 

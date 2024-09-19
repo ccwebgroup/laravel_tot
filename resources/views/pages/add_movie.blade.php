@@ -14,27 +14,46 @@
                             @csrf
                             <div class="form-group">
                                 <label for="title">Title</label>
-                                <input type="text" id="title" name="title" class="form-control" placeholder="Enter movie title" required>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="description">Description</label>
-                                <textarea id="description" name="description" class="form-control" rows="3" placeholder="Enter movie description" required></textarea>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="director">Director</label>
-                                <input type="text" id="director" name="director" class="form-control" placeholder="Enter director's name" required>
+                                <input type="text" id="title" name="title" class="form-control"
+                                    placeholder="Enter movie title" required>
+                                @error('title')
+                                    <div class="alert alert-danger"><small>{{ $message }}</small></div>
+                                @enderror
                             </div>
 
                             <div class="form-group">
                                 <label for="star_rating">Star Rating</label>
-                                <input type="number" id="star_rating" name="star_rating" class="form-control" min="1" max="5" placeholder="Enter star rating (1-5)" required>
+                                <input type="number" id="star_rating" name="star_rating" class="form-control"
+                                    placeholder="Enter star rating (1-5)" required>
+                                @error('star_rating')
+                                    <div class="alert alert-danger"><small>{{ $message }}</small></div>
+                                @enderror
+                            </div>
+
+                            <div class="form-group">
+                                <label for="">Image</label>
+                                <input type="file" class="form-control" name="image" id="image" />
+                                @error('image')
+                                    <div class="alert alert-danger"><small>{{ $message }}</small></div>
+                                @enderror
+                            </div>
+
+                            <div class="form-group">
+                                <label for="description">Description</label>
+                                <textarea id="description" name="description" class="form-control" rows="3" placeholder="Enter movie description"
+                                    required></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="director">Director</label>
+                                <input type="text" id="director" name="director" class="form-control"
+                                    placeholder="Enter director's name" required>
                             </div>
 
                             <div class="form-group">
                                 <label for="date_published">Date Published</label>
-                                <input type="date" id="date_published" name="date_published" class="form-control" required>
+                                <input type="date" id="date_published" name="date_published" class="form-control"
+                                    required>
                             </div>
 
                             <button type="submit" class="btn btn-primary">Add Movie</button>

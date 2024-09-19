@@ -1,7 +1,7 @@
 <?php
 
+use App\Http\Controllers\BookController;
 use App\Http\Controllers\MovieController;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
@@ -24,6 +24,17 @@ Route::get('/edit-movie/{id}', [MovieController::class, 'show_edit_movie_form'])
 Route::post('/edit-movie/{id}', [MovieController::class, 'do_edit']);
 
 Route::delete('/delete-movie/{id}', [MovieController::class, 'do_delete']);
+
+// Book Routes
+Route::get('/books', [BookController::class, 'index']);
+Route::get('/add-book', [BookController::class, 'show_add_book_form']);
+Route::post('/add-book', [BookController::class, 'add_book']);
+
+Route::get('/edit-book/{id}', [BookController::class, 'show_edit_book_form']);
+Route::post('/edit-book/{id}', [BookController::class, 'do_edit']);
+
+Route::delete('/delete-book/{id}', [BookController::class, 'do_delete']);
+
 
 
 

@@ -24,7 +24,7 @@
                 <ul class="nav metismenu" id="side-menu">
                     <li class="nav-header">
                         <div class="dropdown profile-element">
-                            <img alt="image" class="rounded-circle" src="img/profile_small.jpg" />
+                            <img alt="image" class="rounded-circle" src="{{ asset('img/profile_small.jpg') }}" />
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                                 <span class="block m-t-xs font-bold">David Williams</span>
                                 <span class="text-muted text-xs block">Art Director <b class="caret"></b></span>
@@ -41,17 +41,9 @@
                             IN+
                         </div>
                     </li>
-                    <li>
-                        <a href="{{ url('/page1') }}"><i class="fa fas fa-diamond"></i>Page 1</a>
-                    </li>
-                    <li>
-                        <a href="{{ url('/page2') }}"><i class="fa fas fa-diamond"></i>Page 2</a>
-                    </li>
-                    <li>
-                        <a href="{{ url('/page3') }}"><i class="fa fas fa-diamond"></i>Page 3</a>
-                    </li>
                 </ul>
 
+                <x-sidenav-links />
             </div>
         </nav>
 

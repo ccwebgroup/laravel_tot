@@ -8,8 +8,8 @@ use App\Http\Controllers\PostController;
     return $request->user();
 })->middleware('auth:sanctum'); */
 
-Route::get('/', function (Request $request) {
-    return 'hello';
-});
+// Route::get('/', function (Request $request) {
+//     return 'hello';
+// });
 
 Route::apiResource('post', PostController::class);
